@@ -1,24 +1,27 @@
 import React from 'react'
 
+import {Icon} from '../../components/Icon'
 
 import
 {
   Container,
-  ContainerText,
   Title,
-  Icon
+  ContainerIcon
 }
 from './styles'
 
 interface Props {
   title: string;
   icon: string
+  type?: string;
 }
 
-export function Card({title, icon}: Props){
+export function Card({title, icon, type}: Props){
   return(
-    <Container>
-        <Icon name={icon}/>
+    <Container activeOpacity={0.7}>
+      <ContainerIcon>
+      <Icon name={icon} type={type}/>
+      </ContainerIcon>
         <Title>{title}</Title>
     </Container>
   )

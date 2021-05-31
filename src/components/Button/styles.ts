@@ -6,7 +6,6 @@ export const ButtonGeneric = styled.TouchableOpacity`
     align-items: center;
     height: ${RFPercentage(8)}px;
     width: ${RFPercentage(45)}px;
-    margin-top: ${RFPercentage(6)}px;
     border-radius: 5px;
     background-color: ${({theme}) => theme.colors.secondary};
 `;

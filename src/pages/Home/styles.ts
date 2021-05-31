@@ -50,3 +50,15 @@ export const Icon = styled(Feather)`
 export const ListContainer = styled.View`
   margin-top: ${RFPercentage(5)}px;
 `;
+
+export const ButtonContainer = styled.View`
+  align-self: center;
+  justify-content: flex-end;
+  height: ${RFPercentage(10)}px;
+`;
+
+
+export const LoadingContainer = styled.View`
+  margin-top: 10;
+  align-items: center;
+`;

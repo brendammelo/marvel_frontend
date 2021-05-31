@@ -17,7 +17,8 @@ import {
   ContainerText,
   SignUpButton,
   TextSignUpWhite,
-  Image
+  Image,
+  ContainerButton
 } from './styles'
 
 interface FormData{
@@ -69,7 +70,9 @@ export function Login({navigation}){
           selectionColor={THEME.colors.secondary}
           error={errors.password && errors.password.message}
         />
-        <Button title='Entrar' activeOpacity={0.8} onPress={handleSubmit(handleLogin)}/>
+        <ContainerButton>
+          <Button title='Entrar' activeOpacity={0.8} onPress={handleSubmit(handleLogin)}/>
+        </ContainerButton>
         <ContainerText>
           <TextSignUpWhite>Não é registrado?</TextSignUpWhite>
           <SignUpButton activeOpacity={0.7} >

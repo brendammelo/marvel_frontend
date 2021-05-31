@@ -1,6 +1,5 @@
 import styled from 'styled-components/native'
 import {RFPercentage, RFValue} from 'react-native-responsive-fontsize'
-import {Feather} from '@expo/vector-icons'
 
 export const Container = styled.TouchableOpacity`
   margin-top: 10px;
@@ -8,9 +7,11 @@ export const Container = styled.TouchableOpacity`
   height: ${RFPercentage(10)}px;
   width: ${RFPercentage(15)}px;
   justify-content: space-evenly;
+  border-radius: 5px;
 `;
 
-export const ContainerText = styled.View`
+export const ContainerIcon = styled.View`
+margin-left: ${RFPercentage(1)}px;
 `;
 
 export const Title = styled.Text`
@@ -21,8 +22,3 @@ export const Title = styled.Text`
 `;
 
 
-export const Icon = styled(Feather)`
-  color: ${({theme}) => theme.colors.secondary};
-  font-size: ${RFValue(25)}px;
-  margin-left: ${RFPercentage(1)}px;
-`;

@@ -24,7 +24,9 @@ export const Text = styled.Text`
     color: ${({theme}) => theme.colors.text_light}
 `;
 
-
+export const ContainerButton = styled.View`
+  margin-top: ${RFPercentage(6)}px;
+`;
 
 export const ContainerText = styled.View`
   flex-direction: row;

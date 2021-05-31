@@ -16,6 +16,7 @@ export const ContainerIcon = styled.View`
   align-items: center;
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
+
 `;
 
 export const InputText = styled.TextInput`
