@@ -34,14 +34,14 @@ export function Home(){
 
 
   useEffect(() => {
-    //setIsLoading(true)
+    setIsLoading(true)
     async function getComics(){
       try{
         const {data} = await api.get('/v1/public/comics?',{
           params:{
             ts: 1,
-            apikey: API_KEY,
-            hash: API_HASH,
+            apikey: '4e6c7bd72d425e77286a765920a25f16',
+            hash: 'ce533c0fd48323c7b980a89c8595f505',
             offset: currentPage
           }
         })
@@ -75,7 +75,7 @@ const renderFooter = () =>{
 
   return(
     <Container>
-      {/* {isLoading && <Loading/>} */}
+      {isLoading && <Loading/>}
       <Header>
         <LogoutContainer>
           <GreetingContainer>

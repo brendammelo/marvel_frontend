@@ -11,7 +11,7 @@ export const Container = styled.View`
   padding-bottom: 10px;
   align-self: center;
   border-radius: 5px;
-  background-color:#dbdbdb;
+  border-bottom-width: 1px;
   border-bottom-color: ${({theme}) => theme.colors.primary_light};
 `;
 
