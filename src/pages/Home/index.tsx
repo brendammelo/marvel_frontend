@@ -40,8 +40,8 @@ export function Home(){
         const {data} = await api.get('/v1/public/comics?',{
           params:{
             ts: 1,
-            apikey: '4e6c7bd72d425e77286a765920a25f16',
-            hash: 'ce533c0fd48323c7b980a89c8595f505',
+            apikey:API_KEY,
+            hash: API_HASH,
             offset: currentPage
           }
         })
