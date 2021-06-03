@@ -61,4 +61,5 @@ export const ButtonContainer = styled.View`
 export const LoadingContainer = styled.View`
   margin-top: 10;
   align-items: center;
+  height: ${RFPercentage(30)}px;
 `;

@@ -30,19 +30,19 @@ export function Home(){
   const [comics, setComics] = useState([])
   const [isLoading, setIsLoading] = useState(false)
   const [loadingPage, setLoadingPage] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1)
+  const [currentPage, setCurrentPage] = useState(20)
 
 
   useEffect(() => {
-    setIsLoading(true)
+    //setIsLoading(true)
     async function getComics(){
       try{
         const {data} = await api.get('/v1/public/comics?',{
           params:{
             ts: 1,
-            apikey: '',
-            hash: '',
-            offset: currentPage * 20,
+            apikey: API_KEY,
+            hash: API_HASH,
+            offset: currentPage
           }
         })
 
@@ -68,13 +68,14 @@ const renderFooter = () =>{
   }
 
   const handleLoadMore = () => {
-    setCurrentPage(currentPage + 1)
+    console.log('dispatch handle add more')
+    setCurrentPage(currentPage + 20)
     setIsLoading(true)
   }
 
   return(
     <Container>
-      {isLoading && <Loading/>}
+      {/* {isLoading && <Loading/>} */}
       <Header>
         <LogoutContainer>
           <GreetingContainer>
@@ -95,7 +96,7 @@ const renderFooter = () =>{
           data={comics}
           ListFooterComponent={renderFooter}
           onEndReached={handleLoadMore}
-          onEndReachedThreshold={0}
+          onEndReachedThreshold={0.1}
         />
       </ListContainer>
       <ButtonContainer>
